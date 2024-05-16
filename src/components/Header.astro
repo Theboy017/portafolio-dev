@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import LogoImageW from '../assets/img/Logo-Alejandro-Velasquez-White.png';
+import HeaderLink from './HeaderLink.astro';
+---
+<header class="flex justify-between py-5 m-auto w-[1120px]">
+    <Image src={LogoImageW} alt="Alejandro Velasquez" class="rounded-full w-16 h-16"/>
+
+    <nav class="flex gap-10 items-center opacity-85">
+        <HeaderLink href="/">Inicio</HeaderLink>
+        <HeaderLink href="#portafolio">Portafolio</HeaderLink>
+        <HeaderLink href="servicios">Servicios</HeaderLink>
+        <HeaderLink href="#contacto">Contacto</HeaderLink>
+    </nav>
+</header>

@@ -1,0 +1,35 @@
+---
+import ArrowRight from '../icons/ArrowRight.astro'
+import Github from '../icons/Github.astro'
+import SocialPillCards from './SocialPillCards.astro'
+interface Props{
+    titulo:string,
+    subtitulo?:string,
+    class?:string,
+}
+
+const {titulo, subtitulo} = Astro.props
+---
+<article class="rounded-xl p-5 hover:bg-black/60 transition-all">
+    <div class="relative mb-3">
+        <slot name="image" />
+        <a href="#" class="absolute rounded-xl right-0 -bottom-4 p-4 bg-white/70 hover:scale-105 transition">
+            <ArrowRight class="w-3 h-3 text-black"/>
+        </a>
+    </div>
+    <div class="mb-8">
+        <h3 class="relative inline-block mb-3 pl-7">
+            <span class="after:content-[''] after:absolute after:top-1/2 after:left-0 after:w-5 after:h-[1px] after:bg-white"></span>
+            {titulo}
+        </h3>
+        <h2 class=" text-lg mb-3">{subtitulo}</h2>
+        <p class="projects__description">
+            <slot name="description"></slot>
+        </p>
+    </div>
+    <nav>
+        <SocialPillCards href="#">
+            <Github class="w-4 h-4"/>
+        </SocialPillCards>
+    </nav>
+</article>

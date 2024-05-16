@@ -1,0 +1,41 @@
+---
+import PortafolioItems from "./PortafolioItems.astro"
+import { Image } from "astro:assets";
+import camello from "../assets/img/aquicamello.jpg"
+import slotocash from "../assets/img/SlotoCash.avif"
+import livnot from "../assets/img/Livnot-Builders.avif"
+---
+<section id="portafolio" class="grid gap-6 px-16 py-8">
+    <h2 class="flex justify-center text-4xl">
+        <span>Últimos Proyectos Realizados</span>
+    </h2>
+<div class="grid grid-cols-3 gap-x-4 max-w-6xl ">
+    <PortafolioItems
+    titulo="Website"
+    subtitulo="Restaurant Website"
+    >
+    <Image slot="image" src={camello} alt="Hola" class="rounded-xl shadow border border-white/30" />
+    <p slot="description">Project that you carry out in the design
+        and structure of the layout, showing the
+        design at the clients request</p>
+    </PortafolioItems>
+    <PortafolioItems
+    titulo="Website"
+    subtitulo="Restaurant Website"
+    >
+    <Image slot="image" src={slotocash} alt="Hola" class="rounded-xl shadow border border-white/30" />
+    <p slot="description">Project that you carry out in the design
+        and structure of the layout, showing the
+        design at the clients request</p>
+    </PortafolioItems>
+    <PortafolioItems
+    titulo="Website"
+    subtitulo="Restaurant Website"
+    >
+    <Image slot="image" src={livnot} alt="Hola" class="rounded-xl shadow border border-white/30" />
+    <p slot="description">Project that you carry out in the design
+        and structure of the layout, showing the
+        design at the clients request</p>
+    </PortafolioItems>
+</div>
+</section>

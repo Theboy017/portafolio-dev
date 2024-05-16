@@ -1,0 +1,27 @@
+---
+import Badge from "./Badge.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import SocialPillCards from "./SocialPillCards.astro";
+import Github from "../icons/Github.astro";
+---
+
+<section id="inicio" class="flex flex-row justify-center items-center justify-items-center h-[90vh] lg:w-[800px]">
+    <div>
+        <h1 class="text-5xl mb-2 flex flex-row gap-x-4">Alejandro Velásquez
+            <div class="flex justify-center items-center">
+                <Badge href="https://www.linkedin.com/in/alejandrovelasquez017/" class=" transition hover:scale-90 ">Disponible para Trabajar</Badge>
+            </div>
+        </h1>
+        <h2 class="text-3xl mb-1">Desarrollador y Programador Web</h2>
+        <p class="text-balance">T.S.U en Analisis y Diseño de Sistemas, Me destaco con El CMS WordPress editando con sus variados editores visuales y creando funciones especificas en php segun la necesidad del cliente. Experiencias con Tiendas online/Woocomerce pasarelas de pago, Catalogos Online. Sitios Webs Autoadministrables y creacion de manuales de usuario en video.</p>
+        <nav class="flex gap-x-2 mt-4">
+            <SocialPillCards href="https://www.linkedin.com/in/alejandrovelasquez017/">
+                <LinkedIn class="w-4 h-4" />
+            </SocialPillCards>
+            <SocialPillCards href="tel:+556599946351">
+                <Github class="w-4 h-4" />
+            </SocialPillCards>
+        </nav>
+    </div>
+
+</section>
